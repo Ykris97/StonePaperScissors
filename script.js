@@ -32,21 +32,36 @@ const ComputerInput = getRandomItem(array);
 // The Matrix of the results and who wins // 
 
 function gameStructure () {
+
+   let UserPrompt = prompt("Stone,Paper or Scissors ?")
+   let UserInput = UserPrompt.toUpperCase();
+
+   const ComputerInput = getRandomItem(array);
+
+ 
+
+
+
+
+
   
  if (UserInput === "STONE" && ComputerInput === "STONE" || UserInput === "PAPER" && ComputerInput === "PAPER" || UserInput === "SCISSORS" && ComputerInput === "SCISSORS" ){
 
-    console.log("It's a tie");
+    return "tie";
 
 
  }else if (UserInput === "STONE" && ComputerInput === "PAPER" || UserInput === "PAPER" && ComputerInput === "SCISSORS" || UserInput === "SCISSORS" && ComputerInput === "STONE"){
 
-     console.log("You lose");
+     return "lost";
 
+     
 
 
  }else if (UserInput === "STONE" && ComputerInput === "SCISSORS"|| UserInput === "PAPER" && ComputerInput === "STONE" || UserInput === "SCISSORS" && ComputerInput === "PAPER"){
 
-    console.log("You win");
+    return "won";
+
+   
 
 
  } else {
@@ -62,9 +77,56 @@ let i =0
 
 do {
    
-gameStructure(i); i++
+gameStructure(); 
+i++; 
 
 } 
 
 
 while (i < 5);
+
+
+function scoreCounter (){
+
+  let results = gameStructure();
+
+  //The counting system // 
+
+  let j = 0;
+
+  let  k = 0;
+
+
+if(results = "tie"){
+
+ console.log("It's a tie", )
+
+} else if ( results = "lost"){
+
+ console.log("You lost",k,j++)
+
+}else if (results = "won"){
+
+console.log("You won",k++,j)
+
+}else{ 
+
+   console.log("Check the parameters ")
+}
+
+}
+ 
+let l =0
+
+do {
+   
+scoreCounter(); 
+l++; 
+
+} 
+
+
+while (l < 5);
+
+
+

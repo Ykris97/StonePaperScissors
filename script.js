@@ -1,4 +1,3 @@
-//Psudo code //
 
 // Get input from user // 
 
@@ -73,18 +72,10 @@ function gameStructure () {
 }
 
 
-let i =0
+let j = 0;
 
-do {
-   
-gameStructure(); 
-i++; 
-
-} 
-
-
-while (i < 5);
-
+let  k = 0 ;
+// The function to count the score of the rounds
 
 function scoreCounter (){
 
@@ -92,26 +83,24 @@ function scoreCounter (){
 
   //The counting system // 
 
-  let j = 0;
-
-  let  k = 0;
+ 
 
 
-if(results = "tie"){
+if(results == "tie"){
 
- console.log("It's a tie", )
+ console.log("It's a tie",k,j)
 
-} else if ( results = "lost"){
+} else if ( results == "lost"){
 
- console.log("You lost",k,j++)
+ console.log("You lost",k,++j)
 
-}else if (results = "won"){
+}else if (results == "won"){
 
-console.log("You won",k++,j)
+console.log("You won",++k,j)
 
 }else{ 
 
-   console.log("Check the parameters ")
+   console.log("Check the parameters")
 }
 
 }
@@ -124,7 +113,6 @@ scoreCounter();
 l++; 
 
 } 
-
 
 while (l < 5);
 
